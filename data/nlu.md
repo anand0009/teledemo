@@ -6,14 +6,14 @@
 
 ## intent:my_name_is
 - My name is [Ashish](NAME)
-- [ashish](NAME:Ashish) this side
-- It's [ashish](NAME:Ashish)
-- [ashish](NAME:Ashish) is my name
+- [ashish]{"entity": "NAME", "value": "Ashish"} this side
+- It's [ashish]{"entity": "NAME", "value": "Ashish"}
+- [ashish]{"entity": "NAME", "value": "Ashish"} is my name
 - you can call me [Innovate](NAME)
 - [Ashish](NAME)
 - [Rahul](NAME)
 - [Innovate](NAME)
-- [ashish](NAME:Ashish)
+- [ashish]{"entity": "NAME", "value": "Ashish"}
 - robin
 
 ## intent:facing_issue
@@ -21,14 +21,15 @@
 - facing [network issues](NETWORK) every time I make a call. Sometime it takes a time longer than usual.
 - facing network issuesevery time I make a call. Sometime it takes a time longer than usual.
 - I am facing [network issues](NETWORK). Every time I give a call, there is a call drop after connection. Sometimes it also takes more than 2 minutes to connect a call.
+- /facing_issue
 
 ## intent:headset
 - I am using a [samsung](BRAND) phone.
 - I have [One plus](BRAND) mobile
-- I am using [one +](BRAND:One plus)
+- I am using [one +]{"entity": "BRAND", "value": "One plus"}
 - I use [I-phone](BRAND)
-- I prefer [i phone](BRAND:I-phone)
-- i am using [one plus](BRAND:One plus) mobile
+- I prefer [i phone]{"entity": "BRAND", "value": "I-phone"}
+- i am using [one plus]{"entity": "BRAND", "value": "One plus"} mobile
 - realme
 - [I-phone](BRAND)
 - [samsung](BRAND)
@@ -37,7 +38,6 @@
 - [oppo](BRAND)
 - [vivi v19](BRAND)
 - I am using a [samsung](BRAND) phone.
-
 
 ## intent:guide_me
 - Could you please guide me?
@@ -139,7 +139,6 @@
 - nkwj
 - jnjs
 - nnnn
-
 - ;//''
 - bad
 - wqqq
@@ -168,7 +167,8 @@
 - my number is [8921249971](PHONE_NUMBER)
 - [8606512405](PHONE_NUMBER)
 - [8921249972](PHONE_NUMBER)
--[8923777898](PHONE_NUMBER)
+- [8923777898](PHONE_NUMBER)
+
 ## intent:recharge_my_account
 - i want to recharge my account
 - recharge my sim
