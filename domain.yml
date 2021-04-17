@@ -1,0 +1,86 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- thanks
+- my_name_is
+- affirm
+- facing_issue
+- network_issue
+- headset
+- guide_me
+- greet
+- goodbye
+- deny
+- bot_challenge
+- have_to_do
+- new_plan
+- recharge_my_account
+- my_plan
+- chit_chat
+- user_phone_number
+entities:
+- BRAND
+- NAME
+- NETWORK
+- PHONE_NUMBER
+slots:
+  BRAND:
+    type: text
+  NAME:
+    type: text
+  PHONE_NUMBER:
+    type: text
+responses:
+  utter_change_settings:
+  - text: I would like to tell you, sir, that you need to change certain settings
+      of your phone because there is no issue from our end.
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hello! How may I assist you?
+    buttons:
+    - title: New plan
+      payload: /new_plan
+    - title: Facing issue
+      payload: /facing_issue
+    - title: Check my plan usage
+      payload: /my_plan
+    - title: Recharge my account
+      payload: /recharge_my_account
+  utter_iamabot:
+  - text: I am Diya , your digital assistant.
+  - text: I am your digital assistant Diya.
+  utter_your_num:
+  - text: Could you please confirm me your mobile number?
+  utter_solution:
+  - text: Sure sir, I will guide you for that. Go to your settings, select network,
+      and select 3G if you’ve chosen 4G because your sim is not supporting 4G. That’s
+      why you are facing problems while calling.
+  utter_solution_4G:
+  - text: Please visit your nearest store. They will provide you the 4G sim for the
+      same.
+  utter_tell_issue:
+  - text: Yes sir, tell me what issues you are facing?
+  utter_what_handset:
+  - text: Sir, I would like to tell you that your issues will be resolved. Could I
+      please know which handset you are using?
+  utter_default:
+  - text: Sorry ,I didn't get you. Please try again !
+  utter_welcome:
+  - text: You’re welcome!
+actions:
+- action_your_plan
+- utter_change_settings
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_name
+- utter_solution
+- utter_solution_4G
+- utter_tell_issue
+- utter_what_handset
+- utter_your_num
+- utter_default
+- action_new_plan
+- utter_welcome
