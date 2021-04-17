@@ -1,5 +1,5 @@
 session_config:
-  session_expiration_time: 0.0
+  session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
 - thanks
@@ -27,8 +27,6 @@ entities:
 slots:
   BRAND:
     type: text
-  NAME:
-    type: text
   PHONE_NUMBER:
     type: text
 responses:
@@ -38,16 +36,16 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_greet:
-  - text: Hello! How may I assist you?
-    buttons:
-    - title: New plan
-      payload: /new_plan
-    - title: Facing issue
-      payload: /facing_issue
-    - title: Check my plan usage
-      payload: /my_plan
-    - title: Recharge my account
-      payload: /recharge_my_account
+  - buttons:
+    - payload: /new_plan
+      title: New plan
+    - payload: /facing_issue
+      title: Facing issue
+    - payload: /my_plan
+      title: Check my plan usage
+    - payload: /recharge_my_account
+      title: Recharge my account
+    text: Hello! How may I assist you?
   utter_iamabot:
   - text: I am Diya , your digital assistant.
   - text: I am your digital assistant Diya.
@@ -75,7 +73,6 @@ actions:
 - utter_goodbye
 - utter_greet
 - utter_iamabot
-- utter_name
 - utter_solution
 - utter_solution_4G
 - utter_tell_issue
